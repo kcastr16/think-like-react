@@ -1,8 +1,3 @@
-# React + Vite
+With state in this application we have a state of "filtertext". It starts off as a empty string, but once we run the listener of OnFiltertextchange, we update the state of the filtertext to whatever the user inputs. SetFilterText works as a setState in this instance. This is also how we determine the state of items in stock, and once the user searches for a filtertext item, if it is TRUE and the checkbox for in stock is clicked, it will only display to the user the items with stocked: true. For items not in stock, we apply a color of red to those items of stocked: false. We target the product prop with these setStates to filter through those items, apply certain class list and create conditionls that return to us things in stock, what the user searches for and what to display to us what isn't in stock. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Props in this case are utilized to create items that we need to render multiple times. Just like when we are getting information from a third-party API, we need to specify what the prop will be storing in it. In this case we are rendering for the prop of "product" the name of the item, and the item price. From there, we use the ForEach method to create a new prop product for each object in the array.
